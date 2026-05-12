@@ -1,0 +1,14 @@
+<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UnityCare logo">
+  <defs>
+    <linearGradient id="g" x1="8" y1="8" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5DCAA5"/>
+      <stop offset="0.55" stop-color="#1D9E75"/>
+      <stop offset="1" stop-color="#7F77DD"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="21" fill="url(#g)"/>
+  <path d="M32 45C22.7 38.6 16 32.8 16 24.8C16 20 19.3 16.5 23.8 16.5C27.1 16.5 30 18.3 32 21.3C34 18.3 36.9 16.5 40.2 16.5C44.7 16.5 48 20 48 24.8C48 32.8 41.3 38.6 32 45Z" fill="white" fill-opacity="0.95"/>
+  <path d="M21 32H27L30 26L35 38L38 32H44" stroke="#0D2B3E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="76" y="29" fill="white" font-family="Georgia, 'Playfair Display', serif" font-size="24" font-weight="700">UnityCare</text>
+  <text x="77" y="49" fill="rgba(255,255,255,.62)" font-family="Arial, 'DM Sans', sans-serif" font-size="12">Family care coordinator</text>
+</svg>
