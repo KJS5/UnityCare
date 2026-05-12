@@ -718,10 +718,13 @@ class UnityCareHandler(BaseHTTPRequestHandler):
         self.send_json(200, {"ok": True, "reply": reply, "createdAt": created})
 
     def openrouter_care_assistant_reply(self, message: str, context: Dict[str, Any], user: Dict[str, Any]) -> str:
-        api_key = os.environ.get("OPENROUTER_API_KEY")
-        if not api_key:
-            raise RuntimeError("OpenRouter is not configured on the server. Add OPENROUTER_API_KEY in your environment variables and redeploy.")
+        api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
 
+if not api_key:
+    return jsonify({
+        "ok": False,
+        "error": "OpenRouter API key is missing on the server. Check Render Environment variables and redeploy."
+    }), 500
         language = "Arabic" if user.get("language") == "ar" else "English"
         system_prompt = (
             "You are UnityCare Assistant, a calm family care coordinator inside a web app. "
